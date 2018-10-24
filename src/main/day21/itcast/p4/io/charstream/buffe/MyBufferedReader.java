@@ -79,7 +79,38 @@ public class MyBufferedReader {
 
 		}*/
     }
-    public void myreadLine(){
+    public String myreadLine() throws IOException {
+        StringBuilder sb = new StringBuilder();
 
+        int ch =0 ;
+
+        while ((ch=myread())!=-1){
+            if(ch=='\r') {
+                continue;
+            }
+            if(ch=='\n'){
+                return sb.toString();
+            }
+
+            //将从缓冲区中读到的字符，存储到缓存行数据的缓冲区中。
+            sb.append((char)ch);
+
+        }
+        if (sb.length()!=0)
+            return sb.toString();
+        return null;
+
+    }
+    public void myClose() throws IOException {
+
+        r.close();
+    }
+
+    public int read(char[] cbuf, int off, int len) throws IOException {
+
+        return 0;
+    }
+
+    public void close() throws IOException {
     }
 }
