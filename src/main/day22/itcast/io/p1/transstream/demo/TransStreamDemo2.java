@@ -16,15 +16,16 @@ public class TransStreamDemo2 {
         /*
 		 * 1,需求：将键盘录入的数据写入到一个文件中。
 		 *  BufferedReader bufr = new BufferedReader(new InputStreamReader(System.in));
-            BufferedWriter bufw = new BufferedWriter(new OutputStreamWriter(a.txt));
+            BufferedWriter bufw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("b.txt")));
 		 *
 		 * 2,需求：将一个文本文件内容显示在控制台上。
-		 *  BufferedReader bufr = new BufferedReader(new InputStreamReader(a.txt));
+		 *  BufferedReader bufr = new BufferedReader(new InputStreamReader(new FileInputStream("a.txt")));
             BufferedWriter bufw = new BufferedWriter(new OutputStreamWriter(System.out));
 		 *
 		 * 3,需求：将一个文件文件中的内容复制到的另一个文件中。
-		 *  BufferedReader bufr = new BufferedReader(new InputStreamReader(a.txt));
-            BufferedWriter bufw = new BufferedWriter(new OutputStreamWriter(b.txt));
+		 *   BufferedReader bufr = new BufferedReader(new InputStreamReader(new FileInputStream("a.txt")));
+             BufferedWriter bufw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("b.txt")));
+
 		 *
 		 */
 
