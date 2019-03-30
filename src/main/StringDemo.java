@@ -1,14 +1,26 @@
 package main;
-/*
-*@author  zhangyufeng
-*@data 2018/10/25 下午5:03
-*/
+
+import java.util.Arrays;
 
 public class StringDemo {
 
     public static void main( String[] args ) {
 
-        String str = "abc,aa,abc,aa,aa";
+        String[] str1 = {"abc","aa","abc","aa","aa"};
+
+        StringBuffer sb = new StringBuffer();
+        for (String string : str1){
+
+            sb.append( string );
+            sb.append( "," );
+        }
+        String str = sb.toString();
+        System.out.println(str);
+
+
+//        String str = "abc,aa,abc,aa,aa";
+
+
         String sub1="abc";
         String sub2="aa";
         int count1=0;
@@ -26,7 +38,7 @@ public class StringDemo {
                 index=index+sub1.length();
             }
         }
-        System.out.println(sub1+"出现次数为"+count1);
+        System.out.println(sub1+"出现次数为"+count1+"次");
 
         int index1=0;
         while (true){
@@ -38,11 +50,11 @@ public class StringDemo {
             }
         }
 
-        System.out.println(sub2+"出现次数为"+count2);
+        System.out.println(sub2+"出现次数为"+count2+"次");
 
         if(count1>count2){
-            System.out.println(sub1);
-        }if(count1<count2) {System.out.println(sub2);}
-        else System.out.println(sub1+"and"+sub2);
+            System.out.println("出现次数最多的为："+sub1);
+        }else if(count1<count2) {System.out.println("出现次数最多的为："+sub2);}
+        else System.out.println("出现次数最多的为："+sub1 +"and"+ sub2);
 }
 }

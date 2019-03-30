@@ -15,6 +15,12 @@ public class test {
 
     public static void main( String[] args ) {
 
+//        System.out.println("第五个的年龄为" + getage(5));
+        mapppp();
+    }
+
+    //集合 排序遍历
+    public static void mapppp(){
         Map<Integer,String> map = new TreeMap<Integer, String>();
         map.put(2,"zzz");
         map.put(5,"aaa");
@@ -28,7 +34,15 @@ public class test {
             String value= entry.getValue();
             System.out.println(key+":"+value);
         }
+    }
 
+    //正则计算
+    public static int getage( int num ) {
+        if (num==1){
+            return 10;
+        }
+        return 2 + getage( num-1 );
 
     }
+
 }
