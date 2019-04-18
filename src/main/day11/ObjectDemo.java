@@ -34,8 +34,7 @@ class Zi extends Fu
 
 
 import com.sun.deploy.net.HttpRequest;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.Test;
+
 
 
 class Person  extends Object{

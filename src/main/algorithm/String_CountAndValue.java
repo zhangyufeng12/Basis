@@ -1,4 +1,4 @@
-package main;
+package main.algorithm;
 /*
 *@author  zhangyufeng
 *@data 2019/3/8 下午6:02
@@ -26,17 +26,16 @@ public class String_CountAndValue {
          */
         public static Map<Character, Integer> MapFunction(char[] StrArr) {
             Map<Character, Integer> map = new HashMap<Character, Integer>();
-            if (!(StrArr == null || StrArr.length == 0))// 先判断字符数组是否为空
-                for (int i = 0; i < StrArr.length; i++)
-                    if (null != map.get(StrArr[i])){
+            if (!(StrArr == null || StrArr.length == 0)){// 先判断字符数组是否为空
+                for (int i = 0; i < StrArr.length; i++) {
+                    if (null != map.get(StrArr[i])) {
                         // 若不为空，说明已经存在相同字符，则Value值在原来的基础上加1
                         map.put(StrArr[i], map.get(StrArr[i]) + 1);
 //                         System.out.println("StrArr[i]="+StrArr[i]+ " .....map.get:"+map.get( StrArr[i] ));
 
-            }
-                    else
+                    } else
                         map.put(StrArr[i], 1);
-
+                }}
             return map;
         }
 

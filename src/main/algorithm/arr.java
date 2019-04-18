@@ -1,9 +1,9 @@
-package main;
+package main.algorithm;
 
 public class arr {
     public static void main( String[] args ) {
         int[] arr = {23, 12, 21, 31, 4, 54, 5, 5, 5};
-        getMax(arr);
+//        getMax(arr);
 
         Maopao(arr);
         //Xuanze(arr);

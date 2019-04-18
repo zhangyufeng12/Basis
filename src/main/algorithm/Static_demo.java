@@ -1,4 +1,4 @@
-package main;
+package main.algorithm;
 
 public class Static_demo {
 
